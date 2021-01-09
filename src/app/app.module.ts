@@ -1,14 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {MatButtonModule} from '@angular/material/button';
 
 import { AppComponent } from './app.component';
+import { ChildComponent } from './child/child.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { GrandchildComponent } from './grandchild/grandchild.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ChildComponent,
+    GrandchildComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    MatButtonModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
