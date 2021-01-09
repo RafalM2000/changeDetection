@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -10,7 +10,7 @@ export class ChildComponent implements OnInit {
 
   @Input() parentCounter: number;
 
-  childCounter = 0;
+  childCounter = 10;
 
   constructor() { }
 
