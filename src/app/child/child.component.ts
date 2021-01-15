@@ -15,6 +15,7 @@ export class ChildComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    setInterval(() => {this.childCounter++; }, 500);
+    setInterval(() => {this.childCounter++;
+                      }, 500);
   }
 }
