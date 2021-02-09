@@ -1,7 +1,5 @@
 <div class = "jumbotron">
-    <h2>
-        Parent component and his counter is: <span>{{paretnCounter}}</span>
-    </h2>
-    <app-child [parentCounter] = 10></app-child>
+    <button mat-raised-button color="primary" (click)= "sendCounter()">Strzał</button>
+    <app-child [parentCounter] = "parentCounter"></app-child>
 </div>
 

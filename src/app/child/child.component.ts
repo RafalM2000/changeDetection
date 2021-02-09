@@ -1,21 +1,33 @@
-import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, Input, DoCheck, SimpleChanges, AfterContentInit, AfterContentChecked } from '@angular/core';
 
 @Component({
   selector: 'app-child',
   templateUrl: './child.component.html',
   styleUrls: ['./child.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ChildComponent implements OnInit {
+export class ChildComponent implements OnInit,  DoCheck, AfterContentInit, AfterContentChecked {
 
-  @Input() parentCounter: number;
+  @Input() parentCounter: {licznik: number};
 
-  childCounter = 10;
-
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
-    setInterval(() => {this.childCounter++;
-                      }, 500);
+    console.log('OnInit');
+  }
+
+  // ngOnChanges(changes: SimpleChanges): void {
+  //   console.log('OnChanges', changes);
+  // }
+
+  ngDoCheck(): void {
+    console.log('ngDoCheck');
+  };
+
+  ngAfterContentInit(): void {
+    console.log('AfterContentInit');
+  }
+
+  ngAfterContentChecked(): void {
+    console.log('AfterContentChecked');
   }
 }
