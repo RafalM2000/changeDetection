@@ -1,5 +1,6 @@
 <div class = "jumbotron">
+    <h1>Mistrz - Woland</h1>
     <button mat-raised-button color="primary" (click)= "sendCounter()">Strzał</button>
-    <app-child [parentCounter] = "parentCounter"></app-child>
+    <app-child *ngIf = "parentCounter < 3" [parentCounter] = "parentCounter">Korowiow</app-child>
 </div>
 
