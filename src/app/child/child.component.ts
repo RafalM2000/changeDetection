@@ -1,12 +1,14 @@
 import { Component, OnInit, Input, OnChanges,
   AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked,
   OnDestroy,
+  ViewEncapsulation,
   } from '@angular/core';
 
 @Component({
   selector: 'app-child',
   templateUrl: './child.component.html',
   styleUrls: ['./child.component.css'],
+  encapsulation: ViewEncapsulation.Emulated
 })
 export class ChildComponent implements OnInit,  OnChanges,
 AfterViewInit, AfterViewChecked , AfterContentInit, AfterContentChecked,
